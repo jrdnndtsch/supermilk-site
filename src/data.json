@@ -1,0 +1,44 @@
+{
+	"projects": [
+		{
+			"title": "Sanagan's Meat Locker", 
+			"description": "<p>instagram and facebook campaigns for sanagan’s meat locker, a butcher shop in toronto offering product from local farms.</p><p>includes product photography, portraits, and 2 minute video visiting suppliers.</p>", 
+			"slides": [
+				{
+					"type": "image", 
+					"media": [
+						"image_1", 
+						"image_2"
+					]
+				}, 
+				{
+					"type": "image", 
+					"media": [
+						"image_1", 
+						"image_2"
+					]
+				}
+			]
+		}, 
+		{
+			"title": "Second Project", 
+			"description": "<p>instagram and facebook campaigns for sanagan’s meat locker, a butcher shop in toronto offering product from local farms.</p><p>includes product photography, portraits, and 2 minute video visiting suppliers.</p>", 
+			"slides": [
+				{
+					"type": "image", 
+					"media": [
+						"image_1", 
+						"image_2"
+					]
+				}, 
+				{
+					"type": "image", 
+					"media": [
+						"image_1", 
+						"image_2"
+					]
+				}
+			]
+		}
+	]
+}
