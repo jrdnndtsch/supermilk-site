@@ -4,7 +4,9 @@ import data from './data.json';
 
 import PhotoSlide from './Components/PhotoSlide.js';
 import VideoSlide from './Components/VideoSlide.js';
+import DescriptionSlide from './Components/DescriptionSlide.js';
 import Flickity from 'react-flickity-component';
+import About from './Components/About.js';
 
 // import createClient directly
 import {createClient} from 'contentful'
@@ -23,7 +25,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      projects: []
+      projects: [], 
+      aboutOpen: false
     }
   }
 
@@ -51,7 +54,7 @@ class App extends Component {
         {this.state.projects.map((project, i) => {
           return(
 
-            <section className="project" key={i}>
+            <section className="project" key={i} id={`section-${i}`}>
               <h2>{project.fields.title}</h2>
               <Flickity
                  className={'carousel'} // default ''
@@ -73,10 +76,17 @@ class App extends Component {
                     )
                   }
                 })}
+                <DescriptionSlide desc={project.fields.description}/>
                </Flickity>  
+               <a href={`#section-${i + 1}`} className="link-scroll">Scroll Down</a>
             </section>
           )
         })}
+        {this.state.aboutOpen &&
+          (
+            <About/>
+          )
+        }
       </div>
     );
   }
