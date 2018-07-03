@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Ahamono';
+  src: local('Ahamono'), url(./Fonts/ahamono-regular.otf) format("opentype");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Ahamono', monospace;
 }

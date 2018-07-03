@@ -42,10 +42,14 @@ class App extends Component {
     })
 
   }
+
+  toggleAbout(){
+    this.setState({
+      aboutOpen: !this.state.aboutOpen
+    })
+  }
+
   componentDidMount() {
-    // this.setState({
-    //   projects: data.projects
-    // })
     this.getProjectData()
   }
   render() {
@@ -55,7 +59,10 @@ class App extends Component {
           return(
 
             <section className="project" key={i} id={`section-${i}`}>
-              <h2>{project.fields.title}</h2>
+              <div className="flex-title">
+                <h2>{project.fields.title}</h2>
+                <a onClick={this.toggleAbout.bind(this)}>What is Supermilk?</a>
+              </div>
               <Flickity
                  className={'carousel'} // default ''
                  elementType={'div'} // default 'div'
@@ -77,14 +84,19 @@ class App extends Component {
                   }
                 })}
                 <DescriptionSlide desc={project.fields.description}/>
-               </Flickity>  
-               <a href={`#section-${i + 1}`} className="link-scroll">Scroll Down</a>
+               </Flickity>
+               {i < this.state.projects.length - 1 && 
+                (
+                   <a href={`#section-${i + 1}`} className="link-scroll">Scroll Down</a>
+                )
+              }  
+              
             </section>
           )
         })}
         {this.state.aboutOpen &&
           (
-            <About/>
+            <About toggleAbout={this.toggleAbout.bind(this)}/>
           )
         }
       </div>

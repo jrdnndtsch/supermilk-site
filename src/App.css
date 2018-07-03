@@ -21,9 +21,35 @@ body {
 img {
 	width: 100%;
 }
+
+.flex-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+	.flex-title {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
+}
+
+.flex-title a {
+	text-transform: uppercase;
+	color: #C7C7C7;
+	font-size: 2.5rem;
+	cursor: pointer;
+}
 .project {
 	padding: 26px 12%;
 	height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+	.project {
+		padding: 26px 30px;
+	}
 }
 .project h2 {
 	text-transform: uppercase;
@@ -68,6 +94,7 @@ img {
 	height: 0;
 }
 
+
 .slide-video-wrapper iframe {
 	position: absolute;
 	top: 10%;
@@ -76,20 +103,61 @@ img {
 	height: 80%;
 }
 
+
+@media screen and (max-width: 800px) {
+	.slide-video-wrapper {
+		width: 100%;
+	}
+	.slide-video-wrapper iframe {
+		height: 100%;
+	}
+}
 .slide-photo-img {
 	width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+	.slide-photo {
+		flex-direction: column;
+	}
+	.slide-photo-img {
+		width: 60%;
+		margin-bottom: 12px;
+	}
+	.slide-photo-img:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 .slide-photo-img.slide-photo-img-full {
 	width: 80%;
 }
+
+@media screen and (max-width: 800px) {
+	.slide-photo-img.slide-photo-img-full {
+		width: 100%;
+	}
+}
 .slide-photo-img + .slide-photo-img {
 	margin-left: 12px;
+}
+
+@media screen and (max-width: 800px) {
+	.slide-photo-img + .slide-photo-img {
+		margin-left: 0;
+	}
 }
 
 .flickity-viewport {
 	height: 80vh !important;
 	margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 800px) {
+	.flickity-viewport {
+		height: 70vh !important;
+		margin-bottom: 10vh;
+	}
 }
 
 .flickity-page-dots {
@@ -125,6 +193,23 @@ img {
 	position: relative;
 	bottom: 20px;
 	font-weight: 100;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+	.link-scroll {
+		bottom: 8.5vh;
+	}
+}
+
+.slide-about .link-back {
+	color: #FFF;
+	text-decoration: underline;
+	text-transform: uppercase;
+	position: absolute;
+	top: 26px;
+	right: 87px;
+	cursor: pointer;
 }
 
 .slide-about {

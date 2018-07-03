@@ -5,6 +5,7 @@ class About extends Component {
   render() {
     return (
       <div className="slide-about">
+        <a className="link-back" onClick={this.props.toggleAbout}>Back</a>
       	<div>
       		<h2>"Art & Communication"</h2>
       		<ul>
